@@ -1,22 +1,17 @@
 
-
-console.log("User flipped " + cardOne);
-console.log("User Flipped " + cardFour);
-
 var cards = ["queen", "queen", "king", "king"];
 var cardsInPlay = [];
 
-var cardOne;
-cards[0] = cardOne;
-cardsInPlay.push(cardOne);
+var flipCard = function(cardId)
+{
+console.log("User flipped " + cards[cardId]);
 
-console.log("User flipped " + cardsInPlay[0]);
+cardsInPlay.push(cards[cardId]);
 
-var cardTwo;
-cards[2] = cardTwo;
-cardsInPlay.push(cardTwo);
+}
 
-console.log("User flipped " + cardsInPlay[1]);
+flipCard(0)
+flipCard(2)
 
 if (cardsInPlay.length === 2)
     {if (cardsInPlay[0] === cardsInPlay[1])
