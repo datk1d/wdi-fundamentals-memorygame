@@ -19,7 +19,7 @@ var cards = [
 
 var cardsInPlay = [];
 
-var checkForMatch = function()
+function checkForMatch()
 {
   if (cardsInPlay.length === 2)
     {if (cardsInPlay[0] === cardsInPlay[1])
@@ -30,7 +30,7 @@ else
   {alert("Please pick two cards.");}
 
 }
-var flipCard = function(cardId)
+function flipCard(cardId)
 {
 console.log("User flipped " + cards[cardId].rank);
 console.log(cards[cardId].cardImage);
@@ -40,5 +40,11 @@ cardsInPlay.push(cards[cardId].rank);
 checkForMatch();
 }
 
-flipCard(0)
-flipCard(2)
+function createBoard() {
+  for (let i = 0; i < cards.length; i++) {
+    let cardElement = document.createElement('img');
+    cardElement.setAttribute('src','images/back.png')
+  }
+}
+
+createBoard()
